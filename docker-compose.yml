@@ -1,7 +1,8 @@
 version: '3'
 services:
   app:
-    image: chebishev/jenkins-test:alpha
+    # do not add tag in order to get the latest version
+    image: chebishev/jenkins-test
     ports:
       - "3030:3030" # Map port 3030 on the host to port 3030 in the container
     environment:
