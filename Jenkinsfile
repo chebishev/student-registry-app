@@ -5,10 +5,14 @@ pipeline {
     }
     
     stages {
+        stage("Setup"){
+            steps{
+                full_repo = env.DOCKERHUB_REPO + ":1.0.$BUILD_NUMBER"
+            }
+        }
         stage('Build') {
             steps {
                 echo "TEST 1: Variable in the same stage"
-                full_repo = env.DOCKERHUB_REPO + ":1.0.$BUILD_NUMBER"
                 echo "Full repo first occurence: $full_repo"
                 echo "End test 1"
             }
