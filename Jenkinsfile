@@ -27,5 +27,6 @@ pipeline {
                 echo "End test 3"
                 }
             
+        }
     }
 }
