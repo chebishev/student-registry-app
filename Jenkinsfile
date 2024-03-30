@@ -32,7 +32,7 @@ pipeline {
         stage("Deploy") {
             steps{
                 echo "TEST 3: Variable from different stage, not concatenated with other strings"
-                echo ${env.FULL_REPO}
+                echo "${env.FULL_REPO}"
                 echo "End test 3"
             }
         }
