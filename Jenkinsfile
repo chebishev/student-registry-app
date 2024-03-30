@@ -9,11 +9,11 @@ pipeline {
             steps {
                 script {
                     def full_repo = "${env.DOCKERHUB_REPO}:1.0.${BUILD_NUMBER}"
-                    echo "Full repo: ${full_repo}"
+                    echo "TEST 1: Variable in the same stage"
+                    echo "Called From Build stage: ${full_repo}"
+                    echo "End test 1"
                 }
-                echo "TEST 1: Variable in the same stage"
-                echo "Called From Build stage: ${full_repo}"
-                echo "End test 1"
+                
             }
         }
         stage('Test') {
